@@ -6,12 +6,15 @@ import Home from "../pages/Pokemon";
 import Flags from "../pages/Flags";
 import Login from "../Login/Login";
 import PrincipalImg from "../imagenes-pixabay/components/PrincipalImg"
+import Private from "../private/iIndex";
 
 const Router = () => {
   return (
     <BrowserRouter>
+    
       <Routes>
         <Route path="/" element={<App />} />
+        <Route element={<Private />} />
         <Route path="/pokemon" element={<Home />} />
         <Route path="/banderas" element={<Flags />} />
         <Route path="/git" element={<Git />} />
