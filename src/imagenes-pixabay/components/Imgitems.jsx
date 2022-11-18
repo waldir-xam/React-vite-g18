@@ -1,5 +1,6 @@
-const Imgitems = ({previewUrl})=>{
+import'./img.css'
+export const ImgItems =({largeImageURL})=>{
     return(
-        <img src={previewUrl} alt=""/>
+        <img src={largeImageURL} alt="" />
     )
 }

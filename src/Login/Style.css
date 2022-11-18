@@ -1,0 +1,86 @@
+.login-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-image: url(./components/fondo.svg);
+  background-size: contain;
+}
+
+/* header nav */
+.header-login {
+  width: 100%;
+}
+
+.menu-header ul li {
+  font-weight: 600;
+  color: rgb(19, 7, 157);
+  display: flex;
+  flex-direction: row;
+}
+.menu-header ul li a {
+  color: rgb(11, 40, 103);
+  text-decoration: none;
+}
+
+.header-login ul li a:hover {
+  font-weight: 600;
+  color: rgba(0, 68, 255, 0.856);
+}
+/* contenido */
+.container {
+  display: flex;
+}
+
+.izq {
+  width: 50%;
+  padding: 2rem;
+}
+.izq img {
+  height: 75vh;
+  border-radius: 25px;
+}
+.der {
+  width: 50%;
+  padding: 3rem;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.der input {
+  border-radius: 25px;
+  padding: 1em;
+  margin: 10px 0 10px 0;
+  width: 400px;
+}
+.der button {
+  border-radius: 25px;
+  margin: 5px 0 5px 0;
+  padding: 10px 20px 10px 20px;
+  background-color: rgb(2, 127, 39);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  width: 200px;
+}
+.der button:hover {
+  background-color: rgb(2, 37, 127);
+}
+.recover {
+  margin: 5px 0 5px 0;
+  color: #fafafa;
+  font-weight: 500;
+}
+.pre-register {
+  margin: 5px 0 5px 0;
+}
+.register {
+  color: rgb(0, 255, 76);
+}
+.register:hover {
+  color: rgb(255, 255, 255);
+}

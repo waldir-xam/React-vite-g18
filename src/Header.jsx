@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import Router from "./router/Router";
 
 const Header = () => {
   // const nombre = "guillermo";
   //hook useState
-  const [nombre, setNombre] = useState("waldir");
+  const [nombre, setNombre] = useState("Waldir");
 
   const cambiarNombre = (nuevo) => {
     setNombre(nuevo);
@@ -18,6 +20,7 @@ const Header = () => {
           {nombre}
         </strong>
       </p>
+      <Link to="/git">Git</Link>
       <p>mi apellido es : </p>
 
       <input
@@ -32,5 +35,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// 1

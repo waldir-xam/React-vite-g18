@@ -1,19 +1,20 @@
 import { useState } from "react";
+import { PintadoImg } from "./PintadoImg";
 
-const Inputimg = () => {
-  const [valorInput, setValorInput] = useState("");
+export const InputImg = () => {
+  const [valorInput, setValorInput] = useState("aviones");
   const captura = (e) => {
     e.preventDefault();
-    const input = document.querySelector("input");
-    
+    let input = document.querySelector("input");
+    setValorInput(input.value);
   };
   return (
     <div>
       <form action="">
         <input type="text" />
-        <button>Buscar</button>
+        <button onClick={captura}>Buscar</button>
       </form>
+      <PintadoImg valor={valorInput} />
     </div>
   );
 };
-export default Inputimg;
