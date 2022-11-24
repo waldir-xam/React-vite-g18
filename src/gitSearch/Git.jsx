@@ -35,7 +35,7 @@ const Git=()=>{
                         <h1>{user.login}</h1>
                         <img src={user.avatar_url} alt="" />
                         <h4>{user.login}</h4>
-                        <p>{user.bio}</p>
+                        <p className="userBio">{user.bio}</p>
                         <h3>{user.company}</h3>
                     </div>
                 </article>

@@ -7,7 +7,9 @@ const HeaderLogin = () => {
   return (
     <div className="header-login">
       <figure className="logo-login">
-        <img className="logo-img" src={logoImg}></img>
+        <Link to="/">
+          <img className="logo-img" src={logoImg} />
+        </Link>
       </figure>
       <nav className="menu-header">
         <ul>

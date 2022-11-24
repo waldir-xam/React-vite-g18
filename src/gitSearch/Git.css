@@ -32,7 +32,7 @@
   height: 300px;
   border-radius: 50%;
 }
-p {
+.userBio{
   color: rgb(30, 210, 108);
   font-weight: 600;
 }

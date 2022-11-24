@@ -44,7 +44,7 @@
   border-radius: 20px 0 20px 0;
   margin: 1em;
 }
-.btn-counter{
+.btn-counter {
   padding: 10px 20px 10px 20px;
   margin: 1.5em;
   color: #fff;
@@ -80,14 +80,10 @@
   color: "#000";
 }
 /* Header */
-.verde {
-  background-color: green;
-}
 
 .azul {
   background-color: blue;
 }
-
 /* Pokemon */
 .img-pokemon {
   min-height: 250px;
@@ -100,4 +96,13 @@
   max-width: 300px;
   min-height: 400px;
   max-height: 400px;
+}
+
+/* BANDERAS */
+.detailsFlag{
+  text-decoration: none;
+  font-size: 15px;
+}
+.countryName {
+  text-align: center;
 }

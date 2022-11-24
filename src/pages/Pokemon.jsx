@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { getDataFromPokemon } from "../Services";
 import { Container, Card, CardContent, CardMedia, Grid } from "@mui/material";
-import'../App.css'
+import "../pages/Pokemon.css";
+import PokemonDetail from "../Components/PokemonDetail";
+
 const Home = () => {
   const imgUrl =
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/";
@@ -21,33 +23,32 @@ const Home = () => {
   // lo primero que le deocmo peticion
 
   useEffect(() => {
-    //impoertanteee por ahora en lo useEffect es necvesario colocalre un array vacio al termino ya 
+    //impoertanteee por ahora en lo useEffect es necvesario colocalre un array vacio al termino ya
     //qye sino esto generaria un bucle infinito en la peticion
     fetchPokemonList();
   }, []);
   //al colcar los corchets dentro de useEffetc terminas la peticion
-
   return (
     <Container>
-      <h1>Pokdex</h1>
-      <Grid container spacing ={3}>
-        {pokemons.map((lista,index)=>(
-           //aca el codigo visual
-      <Grid item xs={12} md={4} lg={4} sm={12}>
-        <Card className="card-pokemon">
-          <CardMedia
-           
-            component="img"
-            className="img-pokemon"
-            image={`${imgUrl}${index + 1}.svg`}
-          />
-          <CardContent>
-            <h3>{lista.name}</h3>
-          </CardContent>
-        </Card>
-      </Grid>
-
-        ))}     
+      <h1>Pokedex</h1>
+      <Grid container spacing={3}>
+        {pokemons.map((pokemon, index) => (
+          //aca el codigo visual
+          <Grid item xs={12} md={4} lg={4} sm={12}>
+            <Card className="card-pokemon">
+              <CardMedia
+                component="img"
+                className="img-pokemon"
+                image={`${imgUrl}${index + 1}.svg`}
+              />
+              <CardContent>
+                <h3>{pokemon.name}</h3>
+                {/* //esto es otro component */}
+                <PokemonDetail apodo={pokemon.name} url={pokemon.url} />
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
       </Grid>
     </Container>
   );
